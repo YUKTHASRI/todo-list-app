@@ -1,0 +1,236 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+input, select, button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input {
+    flex: 1;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* Task List */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    position: relative;
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-meta {
+    font-size: 12px;
+    color: #666;
+}
+
+.priority-low {
+    color: green;
+}
+
+.priority-medium {
+    color: orange;
+}
+
+.priority-high {
+    color: red;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.task-buttons button {
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.task-buttons .edit {
+    background: #ffc107;
+}
+
+.task-buttons .delete {
+    background: #dc3545;
+    color: white;
+}
+
+.task-buttons button:hover {
+    opacity: 0.8;
+}
+
+/* Error Message Styling */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Custom Category Input */
+#customCategory {
+    display: none;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 500px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .input-section {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    input, select, button {
+        width: 100%;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+}
+/* For tablets and smaller screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .input-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    input, select, button {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/* For mobile screens (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .input-section {
+        gap: 5px;
+    }
+
+    input, select, button {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .task-meta {
+        font-size: 12px;
+    }
+
+    .task-buttons button {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+}
